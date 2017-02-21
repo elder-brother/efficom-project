@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:padding="10dp"
+                tools:background="#C3C3C3"
+    >
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_toLeftOf="@id/image"
+        android:layout_toRightOf="@id/checkbox"
+        android:textColor="#3C3C3C"
+        android:textSize="14sp"
+        tools:text="Title very long for test purpose only in case it overflows"
+        />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/title"
+        android:layout_below="@id/title"
+        android:layout_toLeftOf="@id/image"
+        android:textColor="#3C3C3C"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        tools:text="SubTitle not too long"
+        />
+
+</RelativeLayout>
