@@ -4,39 +4,63 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    
-    <RelativeLayout
-        android:id="@+id/buttons_layout"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_alignParentBottom="true"
-        android:background="#a0414141">
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:text="L"
-            android:layout_centerVertical="true"
-            />
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentRight="true"
-            android:text="R"
-            android:layout_centerVertical="true"
-            />
-    </RelativeLayout>
 
-    <ListView
-        android:id="@+id/listview"
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/buttons_layout"
-        android:layout_below="@id/toolbar"
-        android:background="#7bd171"
-        />
+        android:layout_height="match_parent">
+
+        <!-- Main content  -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/buttons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:background="#a0414141">
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:text="L"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:text="R"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/buttons_layout"
+                android:layout_below="@id/toolbar"
+                android:background="#7bd171"
+                />
+
+        </RelativeLayout>
+
+        <!-- Navigation layout -->
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#FFFFFF">
+
+        </LinearLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
 </RelativeLayout>
